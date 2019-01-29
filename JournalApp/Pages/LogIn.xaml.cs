@@ -32,6 +32,12 @@ namespace JournalApp.Pages
 
         private void UserLogIn_Click(object sender, RoutedEventArgs e)
         {
+            //TODO: Check input
+            this.NavigationService.Navigate(new Uri(@"Pages\EntryView.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void NewUser_Click(object sender, RoutedEventArgs e)
+        {
             Navigate();
         }
     }

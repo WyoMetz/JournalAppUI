@@ -16,18 +16,18 @@ using System.Windows.Shapes;
 namespace JournalApp.Pages
 {
     /// <summary>
-    /// Interaction logic for CreateUser.xaml
+    /// Interaction logic for NewEntryView.xaml
     /// </summary>
-    public partial class CreateUser : Page
+    public partial class NewEntryView : Page
     {
-        public CreateUser()
+        public NewEntryView()
         {
             InitializeComponent();
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
+        private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
         {
-            this.NavigationService.Navigate(new Uri(@"Pages\LogIn.xaml", UriKind.RelativeOrAbsolute));
+
         }
     }
 }
