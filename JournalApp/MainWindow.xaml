@@ -29,7 +29,7 @@
 						<materialDesign:ColorZone Mode='Dark'
 																			Grid.Row='0'
 																			materialDesign:ShadowAssist.ShadowDepth='Depth2'
-																			Opacity='.9'>
+																			Opacity='1'>
 								<Viewbox>
 										<TextBlock Text='This is some New Text'
 															 HorizontalAlignment='Center'
@@ -38,21 +38,24 @@
 								</Viewbox>
 						</materialDesign:ColorZone>
 						<Grid Grid.Row='1'>
-								<Grid.ColumnDefinitions>
-										<ColumnDefinition Width='5*' />
-										<ColumnDefinition Width='50*' />
-								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+										<RowDefinition Height='50*' />
+										<RowDefinition Height='5*' />
+								</Grid.RowDefinitions>
 								<Grid Background='{DynamicResource MaterialDesignPaper}'
 											Opacity='.9'
-											materialDesign:ShadowAssist.ShadowDepth='Depth2'></Grid>
-								<Grid>
+											materialDesign:ShadowAssist.ShadowDepth='Depth2'
+											Grid.Row='1'></Grid>
+								<Grid Grid.Row='1'>
 										<Button Content='Exit'
 														x:Name='Exit'
-														VerticalAlignment='Bottom'
+														HorizontalAlignment='Right'
+														Margin='4'
 														Click='Exit_Click' />
 								</Grid>
-								<Grid Grid.Column='1'>
-										<Frame x:Name='ContentFrame' NavigationUIVisibility='Hidden'/>
+								<Grid>
+										<Frame x:Name='ContentFrame'
+													 NavigationUIVisibility='Hidden' />
 								</Grid>
 						</Grid>
 				</Grid>

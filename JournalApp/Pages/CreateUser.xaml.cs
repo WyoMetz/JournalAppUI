@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace JournalApp
+namespace JournalApp.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CreateUser.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateUser : Page
     {
-        public MainWindow()
+        public CreateUser()
         {
             InitializeComponent();
-            ContentFrame.Navigate(new Uri(@"Pages\LogIn.xaml", UriKind.RelativeOrAbsolute));
-        }
-
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
