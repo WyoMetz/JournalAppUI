@@ -82,7 +82,8 @@
 												Content='Log In'
 												Padding='4'
 												VerticalAlignment='Center'
-												HorizontalAlignment='Center' Margin='4'/>
+												HorizontalAlignment='Center' Margin='4'
+														Click='UserLogIn_Click' />
 										<Button x:Name='NewUser'
 														Grid.Row='3'
 														Content='New User'

@@ -20,6 +20,8 @@ namespace JournalApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string NavigationUri { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,6 +31,12 @@ namespace JournalApp
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+        
+
+        public void Navigation(string Uri)
+        {
+           ContentFrame.Navigate(new Uri(Uri, UriKind.RelativeOrAbsolute));
         }
     }
 }

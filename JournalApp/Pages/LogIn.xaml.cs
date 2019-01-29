@@ -24,5 +24,15 @@ namespace JournalApp.Pages
         {
             InitializeComponent();
         }
+
+        public void Navigate()
+        {
+            this.NavigationService.Navigate(new Uri(@"Pages\CreateUser.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void UserLogIn_Click(object sender, RoutedEventArgs e)
+        {
+            Navigate();
+        }
     }
 }
