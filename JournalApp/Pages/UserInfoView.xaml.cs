@@ -16,26 +16,19 @@ using System.Windows.Shapes;
 namespace JournalApp.Pages
 {
     /// <summary>
-    /// Interaction logic for NewEntryView.xaml
+    /// Interaction logic for UserInfoView.xaml
     /// </summary>
-    public partial class NewEntryView : Page
+    public partial class UserInfoView : Page
     {
-        //TODO: Instaniate a new Entry Object.
-
-        public NewEntryView()
+        public UserInfoView()
         {
             InitializeComponent();
         }
 
-        private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
-        {
-            //TODO: Save Location Info
-        }
-
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: Save all Entry Items.
-            SnackbarThree.MessageQueue.Enqueue("Save Button Clicked.");
+            //TODO: Update Changes
+            this.NavigationService.Navigate(new Uri(@"Pages\EntryView.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

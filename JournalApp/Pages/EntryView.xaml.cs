@@ -24,28 +24,25 @@ namespace JournalApp.Pages
         public EntryView()
         {
             InitializeComponent();
-            Entries = ListCreate();
-            EntryList.ItemsSource = Entries;
-        }
-
-        public List<string> ListCreate()
-        {
-            List<string> list = new List<string>();
-            for (int i = 0; i < 20; i++)
-            {
-                list.Add($"New Entry Title{i}");
-            }
-            return list;
-        }
-
-        public void NavigateToNew()
-        {
-            this.NavigationService.Navigate(new Uri(@"Pages\NewEntryView.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void NewEntry_Click(object sender, RoutedEventArgs e)
         {
-            NavigateToNew();
+            this.NavigationService.Navigate(new Uri(@"Pages\NewEntryView.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void EntryList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //TODO: Load in the Selected Entry
+            //TitleText.Text =
+            //DateText.Text =
+            //LocationText.Text = 
+        }
+
+        private void SaveEdit_Click(object sender, RoutedEventArgs e)
+        {
+            SnackbarThree.MessageQueue.Enqueue("Save Edit Clicked");
+            //TODO: Save The Edit
         }
     }
 }

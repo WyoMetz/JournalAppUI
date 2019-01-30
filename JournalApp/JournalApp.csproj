@@ -88,6 +88,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\UserInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\CreateUser.xaml.cs">
@@ -101,6 +105,9 @@
     </Compile>
     <Compile Include="Pages\NewEntryView.xaml.cs">
       <DependentUpon>NewEntryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserInfoView.xaml.cs">
+      <DependentUpon>UserInfoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

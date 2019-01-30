@@ -20,14 +20,11 @@ namespace JournalApp.Pages
     /// </summary>
     public partial class LogIn : Page
     {
+        //TODO: Check User Values
+
         public LogIn()
         {
             InitializeComponent();
-        }
-
-        public void Navigate()
-        {
-            this.NavigationService.Navigate(new Uri(@"Pages\CreateUser.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void UserLogIn_Click(object sender, RoutedEventArgs e)
@@ -38,7 +35,7 @@ namespace JournalApp.Pages
 
         private void NewUser_Click(object sender, RoutedEventArgs e)
         {
-            Navigate();
+            this.NavigationService.Navigate(new Uri(@"Pages\CreateUser.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

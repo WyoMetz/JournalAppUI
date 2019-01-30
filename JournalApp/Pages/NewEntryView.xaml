@@ -36,6 +36,8 @@
 												 materialDesign:HintAssist.IsFloating='True'
 												 Margin='4'
 												 VerticalAlignment='Center' />
+								<materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}"
+																				 x:Name="SnackbarThree"/>
 								<Viewbox Grid.Column='1'
 												 VerticalAlignment='Center'
 												 Margin='4'>
@@ -113,12 +115,14 @@
 												Content='Save'
 												Grid.Column='2'
 												Padding='6'
-												Margin='4' />
+												Margin='4'
+												Click='Save_Click' />
 								<Button x:Name='Cancel'
-												Content='Cancel'
+												Content='Go Back'
 												Grid.Column='1'
 												Padding='6'
-												Margin='6' />
+												Margin='6'
+												Click='Cancel_Click' />
 						</Grid>
 				</Grid>
 		</Grid>

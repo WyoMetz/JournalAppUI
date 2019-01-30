@@ -29,5 +29,11 @@ namespace JournalApp.Pages
         {
             this.NavigationService.Navigate(new Uri(@"Pages\LogIn.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO: Check Values and Create new User
+            this.NavigationService.Navigate(new Uri(@"Pages\LogIn.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

@@ -38,5 +38,10 @@ namespace JournalApp
         {
            ContentFrame.Navigate(new Uri(Uri, UriKind.RelativeOrAbsolute));
         }
+
+        private void EditUser_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation(@"Pages\UserInfoView.xaml");
+        }
     }
 }

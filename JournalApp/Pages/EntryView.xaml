@@ -31,6 +31,7 @@
 								<RowDefinition Height='35*'/>
 								<RowDefinition Height='35*'/>
 								<RowDefinition Height='35*'/>
+								<RowDefinition Height='12*' />
 						</Grid.RowDefinitions>
 						<Grid Grid.RowSpan='2'
 									Grid.ColumnSpan='2'>
@@ -43,6 +44,7 @@
 												Click='NewEntry_Click' />
 						</Grid>
 						<ListView x:Name='EntryList'
+											SelectionChanged='EntryList_SelectionChanged'
 											ItemsSource='{Binding Entries}'
 											Margin='6'
 											Grid.Row='2'
@@ -51,7 +53,18 @@
 						<RichTextBox x:Name='EntryViewText'
 												 Grid.Column='2'
 												 Grid.Row='2'
-												 Grid.RowSpan='4' Margin='4' IsEnabled='False'/>
+												 Grid.RowSpan='3' Margin='4'/>
+						<Button x:Name='SaveEdit'
+										Click='SaveEdit_Click'
+										Content='Save Edit'
+										HorizontalAlignment='Left'
+										MinWidth='85'
+										Padding='4'
+										Margin='4' 
+										Grid.Row='5' Grid.Column='2'/>
+						<materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}"
+																		 x:Name="SnackbarThree" Grid.Column='2'
+																		 Grid.Row='4'/>
 						<Grid Grid.Column='2'
 									Grid.RowSpan='2' Margin='8'>
 								<Grid.ColumnDefinitions>
@@ -68,8 +81,7 @@
 								</Viewbox>
 								<Viewbox Grid.Column='1'
 												 VerticalAlignment='Center'>
-										<TextBlock Text='A title goes here'
-															 x:Name='TitleText' />
+										<TextBlock x:Name='TitleText' />
 								</Viewbox>
 								<Grid Grid.ColumnSpan='2'
 											Grid.Row='1' Margin='4'>
@@ -86,8 +98,7 @@
 										<Viewbox VerticalAlignment='Center'
 														 HorizontalAlignment='Left'
 														 Grid.Column='1'>
-												<TextBlock Text='2018/01/01'
-																	 x:Name='DateText' />
+												<TextBlock x:Name='DateText' />
 										</Viewbox>
 										<Viewbox VerticalAlignment='Center'
 														 HorizontalAlignment='Right'
@@ -97,8 +108,7 @@
 										<Viewbox VerticalAlignment='Center'
 														 HorizontalAlignment='Left'
 														 Grid.Column='4'>
-												<TextBlock Text='Location Text'
-																	 x:Name='LocationText' />
+												<TextBlock x:Name='LocationText' />
 										</Viewbox>
 								</Grid>
 						</Grid>
