@@ -24,6 +24,7 @@ namespace JournalApp.Pages
         public EntryView()
         {
             InitializeComponent();
+            Application.Current.Resources["GridVisibility"] = Visibility.Visible;
         }
 
         private void NewEntry_Click(object sender, RoutedEventArgs e)

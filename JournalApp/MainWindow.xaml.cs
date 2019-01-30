@@ -20,8 +20,6 @@ namespace JournalApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string NavigationUri { get; set; }
-
         public MainWindow()
         {
             InitializeComponent();

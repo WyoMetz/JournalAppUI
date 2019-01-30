@@ -31,13 +31,15 @@
 																			materialDesign:ShadowAssist.ShadowDepth='Depth2'
 																			Opacity='1'>
 								<Grid>
-								<Viewbox>
-										<TextBlock Text='Welcome to your Journal'
-															 HorizontalAlignment='Center'
-															 VerticalAlignment='Center'
-															 Padding='8' />
+										<Viewbox>
+												<TextBlock HorizontalAlignment='Center'
+																	 VerticalAlignment='Center'
+																	 Padding='8'
+																	 Text='Welcome to the Journal App'>
+														
+												</TextBlock>
 								</Viewbox>
-										<Grid HorizontalAlignment='Right' x:Name='EditGrid'>
+										<Grid HorizontalAlignment='Right' x:Name='EditGrid' Visibility='{DynamicResource GridVisibility}'>
 												<Grid.ColumnDefinitions>
 														<ColumnDefinition Width='25*' />
 														<ColumnDefinition Width='75*' />
