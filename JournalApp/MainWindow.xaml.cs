@@ -41,5 +41,10 @@ namespace JournalApp
         {
             Navigation(@"Pages\UserInfoView.xaml");
         }
+
+        private void TopBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

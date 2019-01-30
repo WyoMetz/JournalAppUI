@@ -14,10 +14,10 @@
 				FontFamily="{DynamicResource MaterialDesignFont}"
 				mc:Ignorable="d"
 				UseLayoutRounding='True'
-				Title="MainWindow"
+				Title="Journal"
 				Height="650"
 				Width="1080"
-				WindowStyle='ToolWindow'>
+				WindowStyle='None'>
 		<Grid>
 				<Image Source='Assets\JournalBackground.jpg'
 							 Stretch='UniformToFill' />
@@ -29,7 +29,9 @@
 						<materialDesign:ColorZone Mode='Dark'
 																			Grid.Row='0'
 																			materialDesign:ShadowAssist.ShadowDepth='Depth2'
-																			Opacity='1'>
+																			Opacity='1'
+																			x:Name='TopBar'
+																			MouseLeftButtonDown='TopBar_MouseLeftButtonDown'>
 								<Grid>
 										<Viewbox>
 												<TextBlock HorizontalAlignment='Center'
